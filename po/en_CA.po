@@ -77,8 +77,88 @@ msgstr ""
 msgid "Requiring authentication"
 msgstr ""
 
-#: ../daemon/daemon.cc:766
-msgid "Watching '{path}' for new torrent files"
+#: ../gtk/conf.c:331 ../gtk/conf.c:336
+#, c-format
+msgid "Importing \"%s\""
+msgstr "Importing \"%s\""
+
+#: ../gtk/details.c:448 ../gtk/details.c:460
+msgid "Use global settings"
+msgstr "Use global settings"
+
+#: ../gtk/details.c:449
+msgid "Seed regardless of ratio"
+msgstr "Seed regardless of ratio"
+
+#: ../gtk/details.c:450
+msgid "Stop seeding at ratio:"
+msgstr "Stop seeding at ratio:"
+
+#: ../gtk/details.c:461
+msgid "Seed regardless of activity"
+msgstr "Seed regardless of activity"
+
+#: ../gtk/details.c:462
+msgid "Stop seeding if idle for N minutes:"
+msgstr "Stop seeding if idle for N minutes:"
+
+#: ../gtk/details.c:478 ../gtk/tr-prefs.c:1282
+msgid "Speed"
+msgstr "Speed"
+
+#: ../gtk/details.c
+msgid "Sequential download"
+msgstr "Sequential download"
+
+#: ../gtk/details.c:480
+msgid "Honor global _limits"
+msgstr "Honour global _limits"
+
+#: ../gtk/details.c:485
+#, c-format
+msgid "Limit _download speed (%s):"
+msgstr "Limit _download speed (%s):"
+
+#: ../gtk/details.c:498
+#, c-format
+msgid "Limit _upload speed (%s):"
+msgstr "Limit _upload speed (%s):"
+
+#: ../gtk/details.c:511 ../gtk/open-dialog.c:351
+msgid "Torrent _priority:"
+msgstr "Torrent _priority:"
+
+#: ../gtk/details.c:515
+msgid "Seeding Limits"
+msgstr "Seeding Limits"
+
+#: ../gtk/details.c:525
+msgid "_Ratio:"
+msgstr "_Ratio:"
+
+#: ../gtk/details.c:534
+msgid "_Idle:"
+msgstr "_Idle:"
+
+#: ../gtk/details.c:537
+msgid "Peer Connections"
+msgstr "Peer Connections"
+
+#: ../gtk/details.c:540
+msgid "_Maximum peers:"
+msgstr "_Maximum peers:"
+
+#: ../gtk/details.c:559 ../gtk/torrent-cell-renderer.c:201
+#: ../libtransmission/verify.c:273
+msgid "Queued for verification"
+msgstr "Queued for verification"
+
+#: ../gtk/details.c:560
+msgid "Verifying local data"
+msgstr "Verifying local data"
+
+#: ../gtk/details.c:561 ../gtk/torrent-cell-renderer.c:204
+msgid "Queued for download"
 msgstr ""
 
 #: ../daemon/daemon.cc:810 ../libtransmission/watchdir-kqueue.cc:117 ../libtransmission/watchdir-win32.cc:181

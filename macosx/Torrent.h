@@ -75,7 +75,11 @@ extern NSString* const kTorrentDidChangeGroupNotification;
 
 @property(nonatomic) uint16_t maxPeerConnect;
 
-@property(nonatomic) BOOL removeWhenFinishSeeding;
+- (void) setMaxPeerConnect: (uint16_t) count;
+- (uint16_t) maxPeerConnect;
+- (BOOL) usesSequential;
+- (void) setSequential: (BOOL) sequential;
+
 
 @property(nonatomic, readonly) BOOL waitingToStart;
 

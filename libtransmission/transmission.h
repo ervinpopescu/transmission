@@ -566,7 +566,27 @@ void tr_sessionSetAntiBruteForceThreshold(tr_session* session, int max_bad_reque
 bool tr_sessionGetAntiBruteForceEnabled(tr_session const* session);
 void tr_sessionSetAntiBruteForceEnabled(tr_session* session, bool enabled);
 
-// ---
+bool       tr_torrentGetSequentialDownload (const tr_torrent *);
+void       tr_torrentSetSequentialDownload (tr_torrent *, bool);
+
+/***
+****
+****  Torrent Queueing
+****
+****  There are independent queues for seeding (TR_UP) and leeching (TR_DOWN).
+****
+****  If the session already has enough non-stalled seeds/leeches when
+****  tr_torrentStart () is called, the torrent will be moved into the
+****  appropriate queue and its state will be TR_STATUS_{DOWNLOAD,SEED}_WAIT.
+****
+****  To bypass the queue and unconditionally start the torrent use
+****  tr_torrentStartNow ().
+****
+****  Torrents can be moved in the queue using the simple functions
+****  tr_torrentQueueMove{Top,Up,Down,Bottom}. They can be moved to
+****  arbitrary points in the queue with tr_torrentSetQueuePosition ().
+****
+***/
 
 /**
  * Torrent Queueing

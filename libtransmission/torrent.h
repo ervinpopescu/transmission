@@ -1384,9 +1384,66 @@ private:
 
     bool sequential_download_ = false;
 
-    // start the torrent after all the startup scaffolding is done,
-    // e.g. fetching metadata from peers and/or verifying the torrent
-    bool start_when_stable_ = false;
+    time_t                     addedDate;
+    time_t                     activityDate;
+    time_t                     doneDate;
+    time_t                     startDate;
+    time_t                     anyDate;
+
+    int                        secondsDownloading;
+    int                        secondsSeeding;
+
+    int                        queuePosition;
+
+    tr_torrent_metadata_func    metadata_func;
+    void                      * metadata_func_user_data;
+
+    tr_torrent_completeness_func    completeness_func;
+    void                          * completeness_func_user_data;
+
+    tr_torrent_ratio_limit_hit_func    ratio_limit_hit_func;
+    void                             * ratio_limit_hit_func_user_data;
+
+    tr_torrent_idle_limit_hit_func    idle_limit_hit_func;
+    void                            * idle_limit_hit_func_user_data;
+
+    void * queue_started_user_data;
+    void (* queue_started_callback)(tr_torrent *, void * queue_started_user_data);
+
+    bool                       isRunning;
+    bool                       isStopping;
+    bool                       isDeleting;
+    bool                       startAfterVerify;
+    bool                       isDirty;
+    bool                       isQueued;
+
+    bool                       magnetVerify;
+
+    bool                       infoDictOffsetIsCached;
+
+    uint16_t                   maxConnectedPeers;
+
+    tr_verify_state            verifyState;
+
+    time_t                     lastStatTime;
+    tr_stat                    stats;
+
+    tr_torrent *               next;
+
+    int                        uniqueId;
+
+    struct tr_bandwidth        bandwidth;
+
+    struct tr_swarm          * swarm;
+
+    float                      desiredRatio;
+    tr_ratiolimit              ratioLimitMode;
+
+    uint16_t                   idleLimitMinutes;
+    tr_idlelimit               idleLimitMode;
+    bool                       finishedSeedingByIdle;
+
+    bool                       sequentialDownload;
 };
 
 // ---

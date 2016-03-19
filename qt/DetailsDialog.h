@@ -85,14 +85,15 @@ private slots:
     void onOpenRequested(QString const& path) const;
 
     // Options tab
-    void onBandwidthPriorityChanged(int);
-    void onHonorsSessionLimitsToggled(bool);
-    void onDownloadLimitedToggled(bool);
-    void onSpinBoxEditingFinished();
-    void onUploadLimitedToggled(bool);
-    void onRatioModeChanged(int);
-    void onIdleModeChanged(int);
-    void onIdleLimitChanged();
+    void onBandwidthPriorityChanged (int);
+    void onHonorsSessionLimitsToggled (bool);
+    void onDownloadLimitedToggled (bool);
+    void onSpinBoxEditingFinished ();
+    void onUploadLimitedToggled (bool);
+    void onRatioModeChanged (int);
+    void onIdleModeChanged (int);
+    void onIdleLimitChanged ();
+    void onSequentialToggled (bool);
 
 private:
     /* When a torrent property is edited in the details dialog (e.g.

@@ -6,7 +6,26 @@
 
 #import "InfoViewController.h"
 
-@interface InfoOptionsViewController : NSViewController<InfoViewController>
+@interface InfoOptionsViewController : NSViewController <InfoViewController>
+{
+    NSArray * fTorrents;
+    
+    BOOL fSet;
+    
+    IBOutlet NSPopUpButton * fPriorityPopUp, * fRatioPopUp, * fIdlePopUp;
+    IBOutlet NSButton * fUploadLimitCheck, * fDownloadLimitCheck, * fGlobalLimitCheck, * fRemoveSeedingCompleteCheck, *fSequentialCheck;
+    IBOutlet NSTextField * fUploadLimitField, * fDownloadLimitField, * fRatioLimitField, * fIdleLimitField,
+                        * fUploadLimitLabel, * fDownloadLimitLabel, * fIdleLimitLabel,
+                        * fRatioLimitGlobalLabel, * fIdleLimitGlobalLabel,
+                        * fPeersConnectLabel, * fPeersConnectField;
+    
+    //remove when we switch to auto layout on 10.7
+    IBOutlet NSTextField * fTransferBandwidthSectionLabel, * fPrioritySectionLabel, * fPriorityLabel;
+    IBOutlet NSTextField * fSeedingLimitsSectionLabel, * fRatioLabel, * fInactivityLabel;
+    IBOutlet NSTextField * fAdvancedSectionLabel, * fMaxConnectionsLabel;
+    
+    NSString * fInitialString;
+}
 
 - (NSRect)viewRect;
 - (void)checkLayout;
@@ -35,5 +54,7 @@
 
 @property(nonatomic) IBOutlet NSView* fPriorityView;
 @property(nonatomic) CGFloat oldHeight;
+
+- (IBAction) setSequential: (id) sender;
 
 @end

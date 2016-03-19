@@ -25,8 +25,677 @@ msgstr ""
 msgid "None"
 msgstr "None"
 
-#: ../cli/cli.cc:92
-msgid "Inf"
+#: ../gtk/actions.c:46
+msgid "Sort by _Name"
+msgstr "Sort by _Name"
+
+#: ../gtk/actions.c:47
+msgid "Sort by _Progress"
+msgstr "Sort by _Progress"
+
+#: ../gtk/actions.c:48
+msgid "Sort by _Queue"
+msgstr "Sort by _Queue"
+
+#: ../gtk/actions.c:49
+msgid "Sort by Rati_o"
+msgstr "Sort by Rati_o"
+
+#: ../gtk/actions.c:50
+msgid "Sort by Stat_e"
+msgstr "Sort by Stat_e"
+
+#: ../gtk/actions.c:51
+msgid "Sort by A_ge"
+msgstr "Sort by A_ge"
+
+#: ../gtk/actions.c:52
+msgid "Sort by Time _Left"
+msgstr "Sort by Time _Left"
+
+#: ../gtk/actions.c:53
+msgid "Sort by Si_ze"
+msgstr "Sort by Si_ze"
+
+#: ../gtk/actions.c:70
+msgid "_Show Transmission"
+msgstr "_Show Transmission"
+
+#: ../gtk/actions.c:71
+msgid "Message _Log"
+msgstr "Message _Log"
+
+#: ../gtk/actions.c:86
+msgid "Enable Alternative Speed _Limits"
+msgstr "Enable Alternative Speed _Limits"
+
+#: ../gtk/actions.c:87
+msgid "_Compact View"
+msgstr "_Compact View"
+
+#: ../gtk/actions.c:88
+msgid "Re_verse Sort Order"
+msgstr "Re_verse Sort Order"
+
+#: ../gtk/actions.c:89
+msgid "_Filterbar"
+msgstr "_Filterbar"
+
+#: ../gtk/actions.c:90
+msgid "_Statusbar"
+msgstr "_Statusbar"
+
+#: ../gtk/actions.c:91
+msgid "_Toolbar"
+msgstr "_Toolbar"
+
+#: ../gtk/actions.c:96
+msgid "_File"
+msgstr "_File"
+
+#: ../gtk/actions.c:97
+msgid "_Torrent"
+msgstr "_Torrent"
+
+#: ../gtk/actions.c:98
+msgid "_View"
+msgstr "_View"
+
+#: ../gtk/actions.c:99
+msgid "_Sort Torrents By"
+msgstr "_Sort Torrents By"
+
+#: ../gtk/actions.c:100
+msgid "_Queue"
+msgstr "_Queue"
+
+#: ../gtk/actions.c:101 ../gtk/details.c:2426
+msgid "_Edit"
+msgstr "_Edit"
+
+#: ../gtk/actions.c:102
+msgid "_Help"
+msgstr "_Help"
+
+#: ../gtk/actions.c:103
+msgid "Copy _Magnet Link to Clipboard"
+msgstr "Copy _Magnet Link to Clipboard"
+
+#: ../gtk/actions.c:104
+msgid "Open _URL…"
+msgstr "Open _URL…"
+
+#: ../gtk/actions.c:104
+msgid "Open URL…"
+msgstr "Open URL…"
+
+#: ../gtk/actions.c:105 ../gtk/actions.c:106
+msgid "Open a torrent"
+msgstr "Open a torrent"
+
+#: ../gtk/actions.c:107
+msgid "_Start"
+msgstr "_Start"
+
+#: ../gtk/actions.c:107
+msgid "Start torrent"
+msgstr "Start torrent"
+
+#: ../gtk/actions.c:108
+msgid "Start _Now"
+msgstr "Start _Now"
+
+#: ../gtk/actions.c:108
+msgid "Start torrent now"
+msgstr "Start torrent now"
+
+#: ../gtk/actions.c:109
+msgid "_Statistics"
+msgstr "_Statistics"
+
+#: ../gtk/actions.c:110
+msgid "_Donate"
+msgstr "_Donate"
+
+#: ../gtk/actions.c:111
+msgid "_Verify Local Data"
+msgstr "_Verify Local Data"
+
+#: ../gtk/actions.c:112
+msgid "_Pause"
+msgstr "_Pause"
+
+#: ../gtk/actions.c:112
+msgid "Pause torrent"
+msgstr "Pause torrent"
+
+#: ../gtk/actions.c:113
+msgid "_Pause All"
+msgstr "_Pause All"
+
+#: ../gtk/actions.c:113
+msgid "Pause all torrents"
+msgstr "Pause all torrents"
+
+#: ../gtk/actions.c:114
+msgid "_Start All"
+msgstr "_Start All"
+
+#: ../gtk/actions.c:114
+msgid "Start all torrents"
+msgstr "Start all torrents"
+
+#: ../gtk/actions.c:115
+msgid "Set _Location…"
+msgstr "Set _Location…"
+
+#: ../gtk/actions.c:116
+msgid "Remove torrent"
+msgstr "Remove torrent"
+
+#: ../gtk/actions.c:117
+msgid "_Delete Files and Remove"
+msgstr "_Delete Files and Remove"
+
+#: ../gtk/actions.c:118
+msgid "_New…"
+msgstr "_New…"
+
+#: ../gtk/actions.c:118
+msgid "Create a torrent"
+msgstr "Create a torrent"
+
+#: ../gtk/actions.c:119
+msgid "_Quit"
+msgstr "_Quit"
+
+#: ../gtk/actions.c:120
+msgid "Select _All"
+msgstr "Select _All"
+
+#: ../gtk/actions.c:121
+msgid "Dese_lect All"
+msgstr "Dese_lect All"
+
+#: ../gtk/actions.c:123
+msgid "Torrent properties"
+msgstr "Torrent properties"
+
+#: ../gtk/actions.c:124
+msgid "Open Fold_er"
+msgstr "Open Fold_er"
+
+#: ../gtk/actions.c:126
+msgid "_Contents"
+msgstr "_Contents"
+
+#: ../gtk/actions.c:127
+msgid "Ask Tracker for _More Peers"
+msgstr "Ask Tracker for _More Peers"
+
+#: ../gtk/actions.c:128
+msgid "Move to _Top"
+msgstr "Move to _Top"
+
+#: ../gtk/actions.c:129
+msgid "Move _Up"
+msgstr "Move _Up"
+
+#: ../gtk/actions.c:130
+msgid "Move _Down"
+msgstr "Move _Down"
+
+#: ../gtk/actions.c:131
+msgid "Move to _Bottom"
+msgstr "Move to _Bottom"
+
+#: ../gtk/actions.c:132
+msgid "Present Main Window"
+msgstr "Present Main Window"
+
+#: ../gtk/conf.c:331 ../gtk/conf.c:336
+#, c-format
+msgid "Importing \"%s\""
+msgstr "Importing \"%s\""
+
+#: ../gtk/details.c:448 ../gtk/details.c:460
+msgid "Use global settings"
+msgstr "Use global settings"
+
+#: ../gtk/details.c:449
+msgid "Seed regardless of ratio"
+msgstr "Seed regardless of ratio"
+
+#: ../gtk/details.c:450
+msgid "Stop seeding at ratio:"
+msgstr "Stop seeding at ratio:"
+
+#: ../gtk/details.c:461
+msgid "Seed regardless of activity"
+msgstr "Seed regardless of activity"
+
+#: ../gtk/details.c:462
+msgid "Stop seeding if idle for N minutes:"
+msgstr "Stop seeding if idle for N minutes:"
+
+#: ../gtk/details.c:478 ../gtk/tr-prefs.c:1282
+msgid "Speed"
+msgstr "Speed"
+
+#: ../gtk/details.c:480
+msgid "Honor global _limits"
+msgstr "Honour global _limits"
+
+#: ../gtk/details.c:485
+#, c-format
+msgid "Limit _download speed (%s):"
+msgstr "Limit _download speed (%s):"
+
+#: ../gtk/details.c:498
+#, c-format
+msgid "Limit _upload speed (%s):"
+msgstr "Limit _upload speed (%s):"
+
+#: ../gtk/details.c:511 ../gtk/open-dialog.c:351
+msgid "Torrent _priority:"
+msgstr "Torrent _priority:"
+
+#: ../gtk/details.c:515
+msgid "Seeding Limits"
+msgstr "Seeding Limits"
+
+#: ../gtk/details.c:525
+msgid "_Ratio:"
+msgstr "_Ratio:"
+
+#: ../gtk/details.c:534
+msgid "_Idle:"
+msgstr "_Idle:"
+
+#: ../gtk/details.c:537
+msgid "Peer Connections"
+msgstr "Peer Connections"
+
+#: ../gtk/details.c:540
+msgid "_Maximum peers:"
+msgstr "_Maximum peers:"
+
+#: ../gtk/details.c:559 ../gtk/torrent-cell-renderer.c:201
+#: ../libtransmission/verify.c:273
+msgid "Queued for verification"
+msgstr "Queued for verification"
+
+#: ../gtk/details.c:560
+msgid "Verifying local data"
+msgstr "Verifying local data"
+
+#: ../gtk/details.c:561 ../gtk/torrent-cell-renderer.c:204
+msgid "Queued for download"
+msgstr "Queued for download"
+
+#: ../gtk/details.c:562 ../gtk/filter.c:702
+msgctxt "Verb"
+msgid "Downloading"
+msgstr "Downloading"
+
+#: ../gtk/details.c:563 ../gtk/torrent-cell-renderer.c:207
+msgid "Queued for seeding"
+msgstr "Queued for seeding"
+
+#: ../gtk/details.c:564 ../gtk/filter.c:703
+msgctxt "Verb"
+msgid "Seeding"
+msgstr "Seeding"
+
+#: ../gtk/details.c:565 ../gtk/filter.c:705 ../gtk/torrent-cell-renderer.c:198
+msgid "Finished"
+msgstr "Finished"
+
+#: ../gtk/details.c:565 ../gtk/filter.c:704 ../gtk/torrent-cell-renderer.c:198
+msgid "Paused"
+msgstr "Paused"
+
+#: ../gtk/details.c:598
+msgid "N/A"
+msgstr "N/A"
+
+#: ../gtk/details.c:610 ../gtk/file-list.c:610
+msgid "Mixed"
+msgstr "Mixed"
+
+#: ../gtk/details.c:611
+msgid "No Torrents Selected"
+msgstr "No Torrents Selected"
+
+#: ../gtk/details.c:633
+msgid "Private to this tracker -- DHT and PEX disabled"
+msgstr "Private to this tracker -- DHT and PEX disabled"
+
+#: ../gtk/details.c:635
+msgid "Public torrent"
+msgstr "Public torrent"
+
+#: ../gtk/details.c:658
+#, c-format
+msgid "Created by %1$s"
+msgstr "Created by %1$s"
+
+#: ../gtk/details.c:660
+#, c-format
+msgid "Created on %1$s"
+msgstr "Created on %1$s"
+
+#: ../gtk/details.c:662
+#, c-format
+msgid "Created by %1$s on %2$s"
+msgstr "Created by %1$s on %2$s"
+
+#: ../gtk/details.c:748
+msgid "Unknown"
+msgstr "Unknown"
+
+#: ../gtk/details.c:776
+#, c-format
+msgid "%1$s (%2$'d piece @ %3$s)"
+msgid_plural "%1$s (%2$'d pieces @ %3$s)"
+msgstr[0] "%1$s (%2$'d piece @ %3$s)"
+msgstr[1] "%1$s (%2$'d pieces @ %3$s)"
+
+#: ../gtk/details.c:782
+#, c-format
+msgid "%1$s (%2$'d piece)"
+msgid_plural "%1$s (%2$'d pieces)"
+msgstr[0] "%1$s (%2$'d piece)"
+msgstr[1] "%1$s (%2$'d pieces)"
+
+#: ../gtk/details.c:816
+#, c-format
+msgid "%1$s (%2$s%%)"
+msgstr "%1$s (%2$s%%)"
+
+#: ../gtk/details.c:818
+#, c-format
+msgid "%1$s (%2$s%% of %3$s%% Available)"
+msgstr "%1$s (%2$s%% of %3$s%% Available)"
+
+#: ../gtk/details.c:820
+#, c-format
+msgid "%1$s (%2$s%% of %3$s%% Available); %4$s Unverified"
+msgstr "%1$s (%2$s%% of %3$s%% Available); %4$s Unverified"
+
+#: ../gtk/details.c:839
+#, c-format
+msgid "%1$s (+%2$s corrupt)"
+msgstr "%1$s (+%2$s corrupt)"
+
+#: ../gtk/details.c:861
+#, c-format
+msgid "%s (Ratio: %s)"
+msgstr "%s (Ratio: %s)"
+
+#: ../gtk/details.c:889
+msgid "No errors"
+msgstr "No errors"
+
+#: ../gtk/details.c:902
+msgid "Never"
+msgstr "Never"
+
+#: ../gtk/details.c:906
+msgid "Active now"
+msgstr "Active now"
+
+#: ../gtk/details.c:910
+#, c-format
+msgid "%1$s ago"
+msgstr "%1$s ago"
+
+#: ../gtk/details.c:929
+msgid "Activity"
+msgstr "Activity"
+
+#: ../gtk/details.c:934
+msgid "Torrent size:"
+msgstr "Torrent size:"
+
+#: ../gtk/details.c:939
+msgid "Have:"
+msgstr "Have:"
+
+#: ../gtk/details.c:944 ../gtk/stats.c:155 ../gtk/stats.c:172
+msgid "Downloaded:"
+msgstr "Downloaded:"
+
+#: ../gtk/details.c:949 ../gtk/stats.c:152 ../gtk/stats.c:169
+msgid "Uploaded:"
+msgstr "Uploaded:"
+
+#: ../gtk/details.c:954
+msgid "State:"
+msgstr "State:"
+
+#: ../gtk/details.c:959
+msgid "Running time:"
+msgstr "Running time:"
+
+#: ../gtk/details.c:964
+msgid "Remaining time:"
+msgstr "Remaining time:"
+
+#: ../gtk/details.c:969
+msgid "Last activity:"
+msgstr "Last activity:"
+
+#: ../gtk/details.c:975
+msgid "Error:"
+msgstr "Error:"
+
+#: ../gtk/details.c:980
+msgid "Details"
+msgstr "Details"
+
+#: ../gtk/details.c:986
+msgid "Location:"
+msgstr "Location:"
+
+#: ../gtk/details.c:993
+msgid "Hash:"
+msgstr "Hash:"
+
+#: ../gtk/details.c:999
+msgid "Privacy:"
+msgstr "Privacy:"
+
+#: ../gtk/details.c:1006
+msgid "Origin:"
+msgstr "Origin:"
+
+#: ../gtk/details.c:1023
+msgid "Comment:"
+msgstr "Comment:"
+
+#: ../gtk/details.c:1051
+msgid "Webseeds"
+msgstr "Webseeds"
+
+#: ../gtk/details.c:1053 ../gtk/details.c:1106
+msgid "Down"
+msgstr "Down"
+
+#: ../gtk/details.c:1104
+msgid "Address"
+msgstr "Address"
+
+#: ../gtk/details.c:1108
+msgid "Up"
+msgstr "Up"
+
+#: ../gtk/details.c:1109
+msgid "Client"
+msgstr "Client"
+
+#: ../gtk/details.c:1110
+msgid "%"
+msgstr "%"
+
+#: ../gtk/details.c:1112
+msgid "Up Reqs"
+msgstr "Up Reqs"
+
+#: ../gtk/details.c:1114
+msgid "Dn Reqs"
+msgstr "Dn Reqs"
+
+#: ../gtk/details.c:1116
+msgid "Dn Blocks"
+msgstr "Dn Blocks"
+
+#: ../gtk/details.c:1118
+msgid "Up Blocks"
+msgstr "Up Blocks"
+
+#: ../gtk/details.c:1120
+msgid "We Cancelled"
+msgstr "We Cancelled"
+
+#: ../gtk/details.c:1122
+msgid "They Cancelled"
+msgstr "They Cancelled"
+
+#: ../gtk/details.c:1123
+msgid "Flags"
+msgstr "Flags"
+
+#: ../gtk/details.c:1478
+msgid "Optimistic unchoke"
+msgstr "Optimistic unchoke"
+
+#: ../gtk/details.c:1479
+msgid "Downloading from this peer"
+msgstr "Downloading from this peer"
+
+#: ../gtk/details.c:1480
+msgid "We would download from this peer if they would let us"
+msgstr "We would download from this peer if they would let us"
+
+#: ../gtk/details.c:1481
+msgid "Uploading to peer"
+msgstr "Uploading to peer"
+
+#: ../gtk/details.c:1482
+msgid "We would upload to this peer if they asked"
+msgstr "We would upload to this peer if they asked"
+
+#: ../gtk/details.c:1483
+msgid "Peer has unchoked us, but we're not interested"
+msgstr "Peer has unchoked us, but we're not interested"
+
+#: ../gtk/details.c:1484
+msgid "We unchoked this peer, but they're not interested"
+msgstr "We unchoked this peer, but they're not interested"
+
+#: ../gtk/details.c:1485
+msgid "Encrypted connection"
+msgstr "Encrypted connection"
+
+#: ../gtk/details.c:1486
+msgid "Peer was found through Peer Exchange (PEX)"
+msgstr "Peer was found through Peer Exchange (PEX)"
+
+#: ../gtk/details.c:1487
+msgid "Peer was found through DHT"
+msgstr "Peer was found through DHT"
+
+#: ../gtk/details.c:1488
+msgid "Peer is an incoming connection"
+msgstr "Peer is an incoming connection"
+
+#: ../gtk/details.c:1489
+msgid "Peer is connected over µTP"
+msgstr "Peer is connected over µTP"
+
+#: ../gtk/details.c:1734 ../gtk/details.c:2441
+msgid "Show _more details"
+msgstr "Show _more details"
+
+#: ../gtk/details.c:1805
+#, c-format
+msgid "Got a list of %1$s%2$'d peers%3$s %4$s ago"
+msgstr "Got a list of %1$s%2$'d peers%3$s %4$s ago"
+
+#: ../gtk/details.c:1809
+#, c-format
+msgid "Peer list request %1$stimed out%2$s %3$s ago; will retry"
+msgstr "Peer list request %1$stimed out%2$s %3$s ago; will retry"
+
+#: ../gtk/details.c:1812
+#, c-format
+msgid "Got an error %1$s\"%2$s\"%3$s %4$s ago"
+msgstr "Got an error %1$s\"%2$s\"%3$s %4$s ago"
+
+#: ../gtk/details.c:1820
+msgid "No updates scheduled"
+msgstr "No updates scheduled"
+
+#: ../gtk/details.c:1825
+#, c-format
+msgid "Asking for more peers in %s"
+msgstr "Asking for more peers in %s"
+
+#: ../gtk/details.c:1829
+msgid "Queued to ask for more peers"
+msgstr "Queued to ask for more peers"
+
+#: ../gtk/details.c:1834
+#, c-format
+msgid "Asking for more peers now… <small>%s</small>"
+msgstr "Asking for more peers now… <small>%s</small>"
+
+#: ../gtk/details.c:1844
+#, c-format
+msgid "Tracker had %s%'d seeders and %'d leechers%s %s ago"
+msgstr "Tracker had %s%'d seeders and %'d leechers%s %s ago"
+
+#: ../gtk/details.c:1848
+#, c-format
+msgid "Got a scrape error \"%s%s%s\" %s ago"
+msgstr "Got a scrape error \"%s%s%s\" %s ago"
+
+#: ../gtk/details.c:1858
+#, c-format
+msgid "Asking for peer counts in %s"
+msgstr "Asking for peer counts in %s"
+
+#: ../gtk/details.c:1862
+msgid "Queued to ask for peer counts"
+msgstr "Queued to ask for peer counts"
+
+#: ../gtk/details.c:1867
+#, c-format
+msgid "Asking for peer counts now… <small>%s</small>"
+msgstr "Asking for peer counts now… <small>%s</small>"
+
+#: ../gtk/details.c:2137
+msgid "List contains invalid URLs"
+msgstr "List contains invalid URLs"
+
+#: ../gtk/details.c:2142
+msgid "Please correct the errors and try again."
+msgstr "Please correct the errors and try again."
+
+#: ../gtk/details.c:2192
+#, c-format
+msgid "%s - Edit Trackers"
+msgstr "%s - Edit Trackers"
+
+#: ../gtk/details.c:2202
+msgid "Tracker Announce URLs"
+msgstr "Tracker Announce URLs"
+
+#: ../gtk/details.c:2205 ../gtk/makemeta-ui.c:490
+msgid ""
+"To add a backup URL, add it on the line after the primary URL.\n"
+"To add another primary URL, add it after a blank line."
 msgstr ""
 
 #: ../daemon/daemon.cc:229 ../gtk/Session.cc:793 ../libtransmission/blocklist.cc:62 ../libtransmission/blocklist.cc:238 ../libtransmission/blocklist.cc:336 ../libtransmission/blocklist.cc:351 ../libtransmission/inout.cc:160 ../libtransmission/utils.cc:125 ../libtransmission/utils.cc:144 ../libtransmission/utils.cc:155 ../libtransmission/watchdir.cc:118
