@@ -29,6 +29,7 @@
                 <outlet property="fRatioPopUp" destination="9" id="74"/>
                 <outlet property="fRemoveSeedingCompleteCheck" destination="113" id="118"/>
                 <outlet property="fSeedingLimitsSectionLabel" destination="21" id="122"/>
+                <outlet property="fSequentialCheck" destination="x3B-0z-4kn" id="BlS-ng-dRT"/>
                 <outlet property="fTransferBandwidthSectionLabel" destination="20" id="125"/>
                 <outlet property="fUploadLimitCheck" destination="8" id="67"/>
                 <outlet property="fUploadLimitField" destination="19" id="71"/>
