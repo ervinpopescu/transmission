@@ -186,7 +186,54 @@ msgstr "Раздавать независимо от активности"
 msgid "Stop seeding if idle for N minutes:"
 msgstr "Прекратить раздачу при простое N минут:"
 
-#: ../gtk/DetailsDialog.cc:571 ../gtk/Torrent.cc:428
+#: ../gtk/details.c:505 ../gtk/tr-prefs.c:1315
+msgid "Speed"
+msgstr "Скорость"
+ 		 
+#: ../gtk/details.c
+msgid "Sequential download"
+msgstr "Последовательная загрузка"
+
+#: ../gtk/details.c:507
+msgid "Honor global _limits"
+msgstr "Учитывать глобальные о_граничения"
+
+#: ../gtk/details.c:512
+#, c-format
+msgid "Limit _download speed (%s):"
+msgstr "Ограничить скорость загрузки (%s):"
+
+#: ../gtk/details.c:525
+#, c-format
+msgid "Limit _upload speed (%s):"
+msgstr "Ограничить скорость раздачи (%s):"
+
+#: ../gtk/details.c:538 ../gtk/open-dialog.c:368
+msgid "Torrent _priority:"
+msgstr "Приоритет _торрента:"
+
+#: ../gtk/details.c:542
+msgid "Seeding Limits"
+msgstr "Ограничения раздачи"
+
+#: ../gtk/details.c:552
+msgid "_Ratio:"
+msgstr "_Рейтинг:"
+
+#: ../gtk/details.c:561
+msgid "_Idle:"
+msgstr "_Ожидание:"
+
+#: ../gtk/details.c:564
+msgid "Peer Connections"
+msgstr "Соединения с участниками"
+
+#: ../gtk/details.c:567
+msgid "_Maximum peers:"
+msgstr "_Максимальное количество участников:"
+
+#: ../gtk/details.c:586 ../gtk/torrent-cell-renderer.c:206
+#: ../libtransmission/verify.c:269
 msgid "Queued for verification"
 msgstr "В очереди на проверку"
 
