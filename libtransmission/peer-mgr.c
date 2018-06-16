@@ -1354,15 +1354,15 @@ tr_peerMgrGetNextRequests (tr_torrent           * tor,
   if (s->pieces == NULL)
     pieceListRebuild (s);
 
-  if (tor->sequentialDownload)
+    if (tor->sequentialDownload)
     {
         if (s->pieceSortState != PIECES_SORTED_BY_INDEX)
-            pieceListSort (s, PIECES_SORTED_BY_INDEX);
+            pieceListSort(s, PIECES_SORTED_BY_INDEX);
     }
-  else
+    else
     {
         if (s->pieceSortState != PIECES_SORTED_BY_WEIGHT)
-            pieceListSort (s, PIECES_SORTED_BY_WEIGHT);
+            pieceListSort(s, PIECES_SORTED_BY_WEIGHT);
     }
 
   assertReplicationCountIsExact (s);
