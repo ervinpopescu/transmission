@@ -478,7 +478,7 @@ parseCommandLine (tr_variant * d, int argc, const char ** argv)
             break;
 
         case 500:
-            tr_variantDictAddBool(d, TR_KEY_sequentialDownload, false);
+            tr_variantDictAddBool(d, TR_KEY_sequentialDownload, true);
             break;
 
         case 501:
