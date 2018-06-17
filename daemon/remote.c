@@ -405,14 +405,14 @@ getOptMode (int val)
       case 993: /* no-trash-torrent */
         return MODE_SESSION_SET;
 
-      case 712: /* tracker-remove */
-      case 950: /* seedratio */
-      case 951: /* seedratio-default */
-      case 952: /* no-seedratio */
-      case 984: /* honor-session */
-      case 985: /* no-honor-session */
-      case 500: /* sequential-download */
-      case 501: /* random-download */
+    case 712: /* tracker-remove */
+    case 950: /* seedratio */
+    case 951: /* seedratio-default */
+    case 952: /* no-seedratio */
+    case 984: /* honor-session */
+    case 985: /* no-honor-session */
+    case 500: /* sequential-download */
+    case 501: /* random-download */
         return MODE_TORRENT_SET;
 
       case 920: /* session-info */
@@ -863,16 +863,12 @@ printDetails (tr_variant * top)
                 printf ("  Percent Done: %s%%\n", buf);
             }
 
-            if (tr_variantDictFindBool (t, TR_KEY_sequentialDownload, &boolVal))
-                printf ("  Sequential download: %s\n", (boolVal ? "Yes" : "No"));
-            if (tr_variantDictFindInt (t, TR_KEY_eta, &i))
-                printf ("  ETA: %s\n", tr_strltime (buf, i, sizeof (buf)));
-            if (tr_variantDictFindInt (t, TR_KEY_rateDownload, &i))
-                printf ("  Download Speed: %s\n", tr_formatter_speed_KBps (buf, i/ (double)tr_speed_K, sizeof (buf)));
-            if (tr_variantDictFindInt (t, TR_KEY_rateUpload, &i))
-                printf ("  Upload Speed: %s\n", tr_formatter_speed_KBps (buf, i/ (double)tr_speed_K, sizeof (buf)));
-            if (tr_variantDictFindInt (t, TR_KEY_haveUnchecked, &i)
-              && tr_variantDictFindInt (t, TR_KEY_haveValid, &j))
+            if (tr_variantDictFindBool(t, TR_KEY_sequentialDownload, &boolVal))
+            {
+                printf("  Sequential download: %s\n", (boolVal ? "Yes" : "No"));
+            }
+
+            if (tr_variantDictFindInt(t, TR_KEY_eta, &i))
             {
                 strlsize (buf, i + j, sizeof (buf));
                 strlsize (buf2, j, sizeof (buf2));

@@ -203,21 +203,22 @@ function Inspector(controller) {
             //  sequential_lb
             //
 
-            if(torrents.length < 1)
+            if (torrents.length < 1) {
                 str = none;
-            else {
+            } else {
                 str = torrents[0].getSequential();
-                for(i=0; t=torrents[i]; ++i) {
+                for (i = 0; t = torrents[i]; ++i) {
                     if(str != t.getSequential()) {
                         str = mixed;
                         break;
                     }
                 }
             }
-            if(typeof str == "boolean")
+            if (typeof str == "boolean") {
                 setTextContent(e.sequential_lb, str ? "Yes" : "No");
-            else
+            } else {
                 setTextContent(e.sequential_lb, str || none);
+            }
 
 
             //

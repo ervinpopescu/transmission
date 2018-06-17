@@ -1686,6 +1686,20 @@ DetailsDialog::onFilePriorityChanged (const QSet<int>& indices, int priority)
     {
         Torrent const& baseline = *torrents.front();
 
+        // mySequentialCheck
+        uniform = true;
+        baselineFlag = baseline.sequentialDownload();
+        for (Torrent const* const tor : torrents)
+        {
+            if (baselineFlag != tor->sequentialDownload())
+            {
+                uniform = false;
+                break;
+            }
+        }
+
+        ui.sequentialCheck->setChecked(uniform && baselineFlag);
+
         // mySessionLimitCheck
         bool uniform = true;
         bool baseline_flag = baseline.honorsSessionLimits();
@@ -2020,10 +2034,19 @@ void DetailsDialog::onIdleModeChanged(int index)
 
 void DetailsDialog::onIdleLimitChanged()
 {
-    //: Spin box format, "Stop seeding if idle for: [ 5 minutes ]"
-    auto const* const units_format = QT_TRANSLATE_N_NOOP("DetailsDialog", "%1 minute(s)");
-    auto const placeholder = QStringLiteral("%1");
-    Utils::updateSpinBoxFormat(ui_.idleSpin, "DetailsDialog", units_format, placeholder);
+    //: Spin box suffix, "Stop seeding if idle for: [ 5 minutes ]" (includes leading space after the number, if needed)
+    QString const unitsSuffix = tr(" minute(s)", nullptr, ui.idleSpin->value());
+
+    if (ui.idleSpin->suffix() != unitsSuffix)
+    {
+        ui.idleSpin->setSuffix(unitsSuffix);
+    }
+}
+
+void DetailsDialog::onSequentialToggled (bool val)
+{
+    mySession.torrentSet(myIds, TR_KEY_sequentialDownload, val);
+    getNewData();
 }
 
 void DetailsDialog::onRatioModeChanged(int index)
@@ -2186,20 +2209,19 @@ void DetailsDialog::initOptionsTab()
     cr->addLayout(ui_.peerConnectionsSectionLayout);
     cr->update();
 
-    void (QComboBox::*const combo_index_changed)(int) = &QComboBox::currentIndexChanged;
-    void (QSpinBox::*const spin_value_changed)(int) = &QSpinBox::valueChanged;
-    connect(ui_.bandwidthPriorityCombo, combo_index_changed, this, &DetailsDialog::onBandwidthPriorityChanged);
-    connect(ui_.idleCombo, combo_index_changed, this, &DetailsDialog::onIdleModeChanged);
-    connect(ui_.idleSpin, &QSpinBox::editingFinished, this, &DetailsDialog::onSpinBoxEditingFinished);
-    connect(ui_.idleSpin, spin_value_changed, this, &DetailsDialog::onIdleLimitChanged);
-    connect(ui_.peerLimitSpin, &QSpinBox::editingFinished, this, &DetailsDialog::onSpinBoxEditingFinished);
-    connect(ui_.ratioCombo, combo_index_changed, this, &DetailsDialog::onRatioModeChanged);
-    connect(ui_.ratioSpin, &QSpinBox::editingFinished, this, &DetailsDialog::onSpinBoxEditingFinished);
-    connect(ui_.sessionLimitCheck, &QCheckBox::clicked, this, &DetailsDialog::onHonorsSessionLimitsToggled);
-    connect(ui_.singleDownCheck, &QCheckBox::clicked, this, &DetailsDialog::onDownloadLimitedToggled);
-    connect(ui_.singleDownSpin, &QSpinBox::editingFinished, this, &DetailsDialog::onSpinBoxEditingFinished);
-    connect(ui_.singleUpCheck, &QCheckBox::clicked, this, &DetailsDialog::onUploadLimitedToggled);
-    connect(ui_.singleUpSpin, &QSpinBox::editingFinished, this, &DetailsDialog::onSpinBoxEditingFinished);
+    connect(ui.sessionLimitCheck, SIGNAL(clicked(bool)), SLOT(onHonorsSessionLimitsToggled(bool)));
+    connect(ui.singleDownCheck, SIGNAL(clicked(bool)), SLOT(onDownloadLimitedToggled(bool)));
+    connect(ui.singleDownSpin, SIGNAL(editingFinished()), SLOT(onSpinBoxEditingFinished()));
+    connect(ui.singleUpCheck, SIGNAL(clicked(bool)), SLOT(onUploadLimitedToggled(bool)));
+    connect(ui.singleUpSpin, SIGNAL(editingFinished()), SLOT(onSpinBoxEditingFinished()));
+    connect(ui.bandwidthPriorityCombo, SIGNAL(currentIndexChanged(int)), SLOT(onBandwidthPriorityChanged(int)));
+    connect(ui.ratioCombo, SIGNAL(currentIndexChanged(int)), SLOT(onRatioModeChanged(int)));
+    connect(ui.ratioSpin, SIGNAL(editingFinished()), SLOT(onSpinBoxEditingFinished()));
+    connect(ui.idleCombo, SIGNAL(currentIndexChanged(int)), SLOT(onIdleModeChanged(int)));
+    connect(ui.idleSpin, SIGNAL(editingFinished()), SLOT(onSpinBoxEditingFinished()));
+    connect(ui.idleSpin, SIGNAL(valueChanged(int)), SLOT(onIdleLimitChanged()));
+    connect(ui.peerLimitSpin, SIGNAL(editingFinished()), SLOT(onSpinBoxEditingFinished()));
+    connect(ui.sequentialCheck, SIGNAL(clicked(bool)), SLOT(onSequentialToggled(bool)));
 }
 
 // ---

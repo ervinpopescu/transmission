@@ -817,8 +817,20 @@ addField (tr_torrent       * const tor,
         tr_variantDictAddInt (d, key, tr_torrentGetRatioMode (tor));
         break;
 
-      case TR_KEY_sequentialDownload:
-        tr_variantDictAddBool (d, key, tr_torrentGetSequentialDownload (tor));
+    case TR_KEY_seedIdleMode:
+        tr_variantDictAddInt(d, key, tr_torrentGetIdleMode(tor));
+        break;
+
+    case TR_KEY_seedRatioLimit:
+        tr_variantDictAddReal(d, key, tr_torrentGetRatioLimit(tor));
+        break;
+
+    case TR_KEY_seedRatioMode:
+        tr_variantDictAddInt(d, key, tr_torrentGetRatioMode(tor));
+        break;
+
+    case TR_KEY_sequentialDownload:
+        tr_variantDictAddBool(d, key, tr_torrentGetSequentialDownload(tor));
         break;
 
       case TR_KEY_sizeWhenDone:
@@ -1318,8 +1330,10 @@ torrentSet (tr_session               * session,
       if (tr_variantDictFindInt (args_in, TR_KEY_queuePosition, &tmp))
         tr_torrentSetQueuePosition (tor, tmp);
 
-      if (tr_variantDictFindBool (args_in, TR_KEY_sequentialDownload, &boolVal))
-        tr_torrentSetSequentialDownload (tor, boolVal);
+        if (tr_variantDictFindBool(args_in, TR_KEY_sequentialDownload, &boolVal))
+        {
+            tr_torrentSetSequentialDownload(tor, boolVal);
+        }
 
       if (!errmsg && tr_variantDictFindList (args_in, TR_KEY_trackerAdd, &trackers))
         errmsg = addTrackerUrls (tor, trackers);

@@ -476,13 +476,16 @@ parseCommandLine (tr_variant * d, int argc, const char ** argv)
             if (torrentPath == NULL)
               torrentPath = optarg;
             break;
-          case 500:
-            tr_variantDictAddBool (d, TR_KEY_sequentialDownload, false);
+
+        case 500:
+            tr_variantDictAddBool(d, TR_KEY_sequentialDownload, false);
             break;
-          case 501:
-            tr_variantDictAddBool (d, TR_KEY_sequentialDownload, false);
+
+        case 501:
+            tr_variantDictAddBool(d, TR_KEY_sequentialDownload, false);
             break;
-          default:
+
+        default:
             return 1;
         }
     }

@@ -13,7 +13,7 @@
     BOOL fSet;
     
     IBOutlet NSPopUpButton * fPriorityPopUp, * fRatioPopUp, * fIdlePopUp;
-    IBOutlet NSButton * fUploadLimitCheck, * fDownloadLimitCheck, * fGlobalLimitCheck, * fRemoveSeedingCompleteCheck, *fSequentialCheck;
+    IBOutlet NSButton * fUploadLimitCheck, * fDownloadLimitCheck, * fGlobalLimitCheck, * fRemoveSeedingCompleteCheck, * fSequentialCheck;
     IBOutlet NSTextField * fUploadLimitField, * fDownloadLimitField, * fRatioLimitField, * fIdleLimitField,
                         * fUploadLimitLabel, * fDownloadLimitLabel, * fIdleLimitLabel,
                         * fRatioLimitGlobalLabel, * fIdleLimitGlobalLabel,

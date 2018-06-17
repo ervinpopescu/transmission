@@ -17,7 +17,6 @@
  #include <windows.h> /* CreateProcess (), GetLastError () */
 #endif
 
-#include <assert.h>
 #include <math.h>
 #include <stdarg.h>
 #include <string.h> /* memcmp */
@@ -888,7 +887,7 @@ torrentInit (tr_torrent * tor, const tr_ctor * ctor)
 
   tor->finishedSeedingByIdle = false;
 
-  tor->sequentialDownload = false;
+    tor->sequentialDownload = false;
 
   tr_peerMgrAddTorrent (session->peerMgr, tor);
 
@@ -2461,23 +2460,20 @@ tr_torrentSetPriority (tr_torrent * tor, tr_priority_t priority)
     {
       tor->bandwidth.priority = priority;
 
-      tr_torrentSetDirty (tor);
+        tr_torrentSetDirty(tor);
     }
 }
 
-bool
-tr_torrentGetSequentialDownload (const tr_torrent * tor)
+bool tr_torrentGetSequentialDownload(const tr_torrent* tor)
 {
-  assert (tr_isTorrent (tor));
+    TR_ASSERT(tr_isTorrent(tor));
 
   return tor->sequentialDownload;
 }
 
-void
-tr_torrentSetSequentialDownload (tr_torrent * tor, bool sequential)
+void tr_torrentSetSequentialDownload(tr_torrent* tor, bool sequential)
 {
-  assert (tr_isTorrent (tor));
-
+    TR_ASSERT(tr_isTorrent(tor));
 
   if (tor->sequentialDownload != sequential)
     {

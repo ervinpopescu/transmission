@@ -566,8 +566,8 @@ void tr_sessionSetAntiBruteForceThreshold(tr_session* session, int max_bad_reque
 bool tr_sessionGetAntiBruteForceEnabled(tr_session const* session);
 void tr_sessionSetAntiBruteForceEnabled(tr_session* session, bool enabled);
 
-bool       tr_torrentGetSequentialDownload (const tr_torrent *);
-void       tr_torrentSetSequentialDownload (tr_torrent *, bool);
+bool tr_torrentGetSequentialDownload(const tr_torrent*);
+void tr_torrentSetSequentialDownload(tr_torrent*, bool);
 
 /***
 ****

@@ -1443,7 +1443,7 @@ private:
     tr_idlelimit               idleLimitMode;
     bool                       finishedSeedingByIdle;
 
-    bool                       sequentialDownload;
+    bool sequentialDownload;
 };
 
 // ---
