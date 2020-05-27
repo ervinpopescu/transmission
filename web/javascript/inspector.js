@@ -859,6 +859,7 @@ function Inspector(controller) {
             data.elements.origin_lb = $('#inspector-info-origin')[0];
             data.elements.comment_lb = $('#inspector-info-comment')[0];
             data.elements.name_lb = $('#torrent_inspector_name')[0];
+            data.elements.sequential_lb = $('#inspector-info-sequential-download')[0];
 
             // force initial 'N/A' updates on all the pages
             updateInspector();
