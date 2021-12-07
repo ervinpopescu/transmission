@@ -841,6 +841,16 @@ TODO: fix this when notifications get fixed
       );
     }
   }
+  
+  _downloadSequentially(seq) {
+    this.remote.sendTorrentSetRequests(
+	  'torrent-set',
+      Transmission._getTorrentIds(this.getSelectedTorrents()),
+      { sequential: seq },
+      this.refreshTorrents,
+      this
+    );
+  }
 
   _startSelectedTorrents(force) {
     this._startTorrents(this.getSelectedTorrents(), force);
