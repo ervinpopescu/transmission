@@ -361,6 +361,22 @@ export class Inspector extends EventTarget {
       )})`;
     }
     setTextContent(e.info.uploaded, string);
+	
+	// sequential download
+    if (torrents.length === 0) {
+      string = none;
+    } else {
+      const get = (t) => t.getSequential();
+      const first = get(torrents[0]);
+	  string = first;
+      if (!torrents.every((t) => get(t) === first)) {
+        string = mixed;
+      }
+	  if (typeof string == "boolean") {
+        string = string ? "Yes" : "No";
+      }
+    }
+    setTextContent(e.info.sequential, string);
 
     // running time
     if (torrents.length === 0) {
